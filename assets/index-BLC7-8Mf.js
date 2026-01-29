@@ -96,7 +96,7 @@ about:\r
     - "I'm a Master's student in Information Management at the University of Illinois Urbana-Champaign with a strong interest in using data and AI to solve real-world problems. I currently maintain a 4.0 GPA and enjoy working across analytics, machine learning, and data-driven storytelling."\r
     - "Before graduate school, I worked at Deloitte as a Network Engineer, where I gained hands-on experience with large-scale enterprise systems and learned how technology decisions play out in real operational environments. That experience shaped my interest in building data solutions that are both technically sound and practically useful."\r
     - "Today, I work as a Research Assistant at RailTEC, analyzing freight-train derailment risk using statistical modeling and text analysis, and as a Data Analyst for CHIME-in, where I study the relationship between extreme heat and public health outcomes using statewide climate and health data."\r
-    - "I enjoy turning complex, messy data into clear insights—whether through modeling, visualization, or AI-driven applications—and I'm motivated by work that blends analytical rigor with real-world impact."\r
+    - "I enjoy turning complex, messy data into clear insights, whether through modeling, visualization, or AI-driven applications, and I'm motivated by work that blends analytical rigor with real-world impact."\r
 \r
 # Skills Section\r
 skills:\r
@@ -196,7 +196,7 @@ projects:\r
       media: []\r
     - id: 2\r
       title: "Carely — A Memory-Augmented AI Companion"\r
-      shortDescription: "An AI companion designed to support seniors with daily routines, emotional well-being, and memory — prioritizing safety, trust, and human-centered design."\r
+      shortDescription: "An AI companion designed to support seniors with daily routines, emotional well-being, and memory, while prioritizing safety, trust, and human-centered design."\r
       detailedDescription:\r
         - "Carely is not just a chatbot. It is an AI companion designed to support seniors with daily routines, emotional well-being, and memory — while prioritizing safety, trust, and human-centered design. The core challenge wasn't what Carely should say, but how an AI system should remember, reason, and respond responsibly over time."\r
         - "🧠 <strong>Memory as a First-Class System:</strong> Carely is built with a layered memory architecture that explicitly separates short-term conversational context, long-term personal memory (people, routines, preferences), and temporal grounding (when information is valid). This allows Carely to recall meaningful details, maintain continuity across conversations, and reduce repetition — while minimizing hallucinations. Memory storage and retrieval are explicit, auditable, and designed for safe scaling."\r
