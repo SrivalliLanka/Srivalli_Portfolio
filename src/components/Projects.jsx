@@ -6,6 +6,10 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
+  const base = import.meta.env.BASE_URL || '/'
+  const resolveAssetUrl = (relativePath) =>
+    relativePath ? `${base}${relativePath.replace(/^\//, '')}` : ''
+
   const openModal = (project) => {
     setSelectedProject(project)
     setIsModalOpen(true)
@@ -33,6 +37,10 @@ const Projects = () => {
         <div className="space-y-6">
           {projects.map((project) => {
             const hasImage = project.thumbnail || project.heroMedia
+
+            const thumbnailUrl = resolveAssetUrl(
+              project.thumbnail || project.heroMedia?.url || ''
+            )
             
             return (
               <div
@@ -64,7 +72,7 @@ const Projects = () => {
                     }`}>
                       {hasImage ? (
                         <img 
-                          src={project.thumbnail || project.heroMedia?.url} 
+                          src={thumbnailUrl} 
                           alt={project.title}
                           className={`${
                             project.id === 3 ? 'max-w-full max-h-full object-contain' : // Foundational DE Projects - full logo without padding

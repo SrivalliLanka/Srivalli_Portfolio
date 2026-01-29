@@ -19,14 +19,14 @@ hero:
 # About Section
 about:
   title: "About Me"
-  profileImage: "/My_image.jpg"
+  profileImage: "My_image.jpg"
   profileImageAlt: "Srivalli Lanka"
   fallbackInitials: "SL"
   paragraphs:
     - "I'm a Master's student in Information Management at the University of Illinois Urbana-Champaign with a strong interest in using data and AI to solve real-world problems. I currently maintain a 4.0 GPA and enjoy working across analytics, machine learning, and data-driven storytelling."
     - "Before graduate school, I worked at Deloitte as a Network Engineer, where I gained hands-on experience with large-scale enterprise systems and learned how technology decisions play out in real operational environments. That experience shaped my interest in building data solutions that are both technically sound and practically useful."
     - "Today, I work as a Research Assistant at RailTEC, analyzing freight-train derailment risk using statistical modeling and text analysis, and as a Data Analyst for CHIME-in, where I study the relationship between extreme heat and public health outcomes using statewide climate and health data."
-    - "I enjoy turning complex, messy data into clear insights—whether through modeling, visualization, or AI-driven applications—and I'm motivated by work that blends analytical rigor with real-world impact."
+    - "I enjoy turning complex, messy data into clear insights, whether through modeling, visualization, or AI-driven applications, and I'm motivated by work that blends analytical rigor with real-world impact."
 
 # Skills Section
 skills:
@@ -119,14 +119,14 @@ projects:
       date: "May 2025 – Present"
       github: ""
       live: ""
-      thumbnail: "/projects/RailTEC.png"
+      thumbnail: "projects/RailTEC.png"
       heroMedia:
         type: "slides"
         url: "https://docs.google.com/presentation/d/e/2PACX-1vRvpRvUSp-CxnNVSfHDHOYmgF8kats9UboZTKnDyK_TOtAd5RFCu8fA7sXiqImVwTyYqB1Hx_cjyD8f/pubembed?start=true&loop=true&delayms=3000"
       media: []
     - id: 2
       title: "Carely — A Memory-Augmented AI Companion"
-      shortDescription: "An AI companion designed to support seniors with daily routines, emotional well-being, and memory — prioritizing safety, trust, and human-centered design."
+      shortDescription: "An AI companion designed to support seniors with daily routines, emotional well-being, and memory, while prioritizing safety, trust, and human-centered design."
       detailedDescription:
         - "Carely is not just a chatbot. It is an AI companion designed to support seniors with daily routines, emotional well-being, and memory — while prioritizing safety, trust, and human-centered design. The core challenge wasn't what Carely should say, but how an AI system should remember, reason, and respond responsibly over time."
         - "🧠 <strong>Memory as a First-Class System:</strong> Carely is built with a layered memory architecture that explicitly separates short-term conversational context, long-term personal memory (people, routines, preferences), and temporal grounding (when information is valid). This allows Carely to recall meaningful details, maintain continuity across conversations, and reduce repetition — while minimizing hallucinations. Memory storage and retrieval are explicit, auditable, and designed for safe scaling."
@@ -156,7 +156,7 @@ projects:
       date: "Aug 2025 – Dec 2025"
       github: ""
       live: ""
-      thumbnail: "/projects/Carely_logo.png"
+      thumbnail: "projects/Carely_logo.png"
       heroMedia:
         type: "video"
         url: "/projects/Carely.mp4"
@@ -186,10 +186,10 @@ projects:
       date: "May 2025 – Aug 2025"
       github: ""
       live: ""
-      thumbnail: "/projects/DE_logo.png"
+      thumbnail: "projects/DE_logo.png"
       heroMedia:
         type: "image"
-        url: "/projects/DE_logo.png"
+        url: "projects/DE_logo.png"
       media: []
       subProjects:
         - id: 3.1
@@ -205,7 +205,7 @@ projects:
             - "• Learn how ETL pipelines are deployed and monitored on AWS"
             - "• Practice storing structured outputs in cloud object storage (S3)"
             - ""
-            - '<div class="my-6"><img src="/projects/Airflow_img.png" alt="Airflow" class="w-full max-w-4xl mx-auto rounded-lg shadow-lg" /></div>'
+            - '<div class="my-6"><img src="projects/Airflow_img.png" alt="Airflow" class="w-full max-w-4xl mx-auto rounded-lg shadow-lg" /></div>'
             - ""
             - "<strong>What I Built</strong>"
             - ""
@@ -252,7 +252,7 @@ projects:
             - ""
             - "The focus was on learning and implementing industry-standard tools and patterns."
             - ""
-            - '<div class="my-6"><img src="/projects/youtube-DE.jpg" alt="Flow" class="w-full max-w-4xl mx-auto rounded-lg shadow-lg" /><p class="text-center text-gray-600 font-medium mt-2">Flow</p></div>'
+            - '<div class="my-6"><img src="projects/youtube-DE.jpg" alt="Flow" class="w-full max-w-4xl mx-auto rounded-lg shadow-lg" /><p class="text-center text-gray-600 font-medium mt-2">Flow</p></div>'
             - ""
             - "<strong>Data Ingestion</strong>"
             - ""
@@ -327,10 +327,10 @@ projects:
       date: "Dec 2024"
       github: ""
       live: ""
-      thumbnail: "/projects/tab1.png"
+      thumbnail: "projects/tab1.png"
       heroMedia:
         type: "image"
-        url: "/projects/tab1.png"
+        url: "projects/tab1.png"
       media: []
 
 # Contact Section

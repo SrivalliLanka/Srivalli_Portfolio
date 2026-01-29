@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
   const [imageError, setImageError] = useState(false)
+
+  const base = import.meta.env.BASE_URL || '/'
+  const resolveAssetUrl = (relativePath) =>
+    relativePath ? `${base}${relativePath.replace(/^\//, '')}` : ''
   
   // Reset image error when modal opens or project changes
   useEffect(() => {
@@ -34,14 +38,14 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
         {/* Hero Image/Video Section */}
         {(project.heroMedia && Object.keys(project.heroMedia).length > 0) || project.thumbnail ? (
-          <div className={`relative bg-gradient-to-br from-blue-400 to-purple-400 overflow-hidden rounded-t-2xl ${
-            isSubProject ? '' : 'h-64 md:h-96'
-          }`} style={isSubProject ? { height: '2cm' } : {}}>
+          <div
+            className={`relative bg-gradient-to-br from-blue-400 to-purple-400 rounded-t-2xl flex items-center justify-center px-2 py-3 md:px-4 md:py-4`}
+          >
             {project.heroMedia && project.heroMedia.type === 'image' && (
-              <img 
-                src={project.heroMedia.url} 
+              <img
+                src={resolveAssetUrl(project.heroMedia.url)}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                className="w-full max-h-[70vh] object-contain mx-auto"
                 onError={(e) => {
                   setImageError(true)
                   e.target.style.display = 'none'
@@ -49,47 +53,51 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               />
             )}
             {project.heroMedia && project.heroMedia.type === 'image' && imageError && (
-              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-400">
+              <div className="w-full h-full flex items-center justify-center">
                 <span className="text-white text-4xl font-bold opacity-75">
                   Image not found
                 </span>
               </div>
             )}
             {project.heroMedia && project.heroMedia.type === 'video' && (
-              <video 
-                src={project.heroMedia.url}
+              <video
+                src={resolveAssetUrl(project.heroMedia.url)}
                 controls
-                className="w-full h-full object-cover"
+                className="w-full max-h-[70vh] object-contain mx-auto rounded-lg bg-black"
               />
             )}
             {project.heroMedia && project.heroMedia.type === 'youtube' && (
-              <iframe
-                src={project.heroMedia.url}
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              <div className="w-full max-w-5xl mx-auto aspect-video">
+                <iframe
+                  src={project.heroMedia.url}
+                  className="w-full h-full rounded-lg"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             )}
             {project.heroMedia && project.heroMedia.type === 'slides' && (
-              <iframe
-                src={project.heroMedia.url}
-                className="w-full h-full"
-                allowFullScreen
-              />
+              <div className="w-full max-w-5xl mx-auto aspect-video">
+                <iframe
+                  src={project.heroMedia.url}
+                  className="w-full h-full rounded-lg"
+                  allowFullScreen
+                />
+              </div>
             )}
             {(!project.heroMedia || Object.keys(project.heroMedia).length === 0) && project.thumbnail && (
               <>
-                <img 
-                  src={project.thumbnail} 
+                <img
+                  src={resolveAssetUrl(project.thumbnail)}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full max-h-[70vh] object-contain mx-auto"
                   onError={(e) => {
                     setImageError(true)
                     e.target.style.display = 'none'
                   }}
                 />
                 {imageError && (
-                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-400">
+                  <div className="w-full h-full flex items-center justify-center">
                     <span className="text-white text-4xl font-bold opacity-75">
                       Image not found
                     </span>
@@ -99,14 +107,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             )}
           </div>
         ) : (
-          <div className={`relative bg-gradient-to-br from-blue-400 to-purple-400 overflow-hidden rounded-t-2xl ${
-            isSubProject ? '' : 'h-64 md:h-96'
-          }`} style={isSubProject ? { height: '2cm' } : {}}>
-            <div className="w-full h-full flex items-center justify-center">
-              <span className="text-white text-6xl md:text-8xl font-bold opacity-50">
-                {project.title.charAt(0)}
-              </span>
-            </div>
+          <div
+            className="relative bg-gradient-to-br from-blue-400 to-purple-400 overflow-hidden rounded-t-2xl px-4 py-8 flex items-center justify-center"
+          >
+            <span className="text-white text-6xl md:text-8xl font-bold opacity-50">
+              {project.title.charAt(0)}
+            </span>
           </div>
         )}
 
@@ -155,7 +161,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             {project.id === 4 && (
               <div className="flex justify-center">
                 <img
-                  src="/projects/tab2.png"
+                  src={resolveAssetUrl('projects/tab2.png')}
                   alt={`${project.title} - Additional view`}
                   className="w-full max-w-xl rounded-xl shadow-lg object-contain"
                 />
@@ -204,14 +210,14 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <div key={index} className="bg-gray-100 rounded-xl overflow-hidden">
                       {item.type === 'image' && (
                         <img 
-                          src={item.url} 
+                          src={resolveAssetUrl(item.url)} 
                           alt={`${project.title} - ${index + 1}`}
                           className="w-full h-64 object-cover"
                         />
                       )}
                       {item.type === 'video' && (
                         <video 
-                          src={item.url}
+                          src={resolveAssetUrl(item.url)}
                           controls
                           className="w-full h-64 object-cover"
                         />

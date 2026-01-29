@@ -1,7 +1,6 @@
 {
   "name": "my-portfolio",
-  "homepage": "https://github.com/SrivalliLanka/Srivalli_Portfolio/",
-  "private": true,
+  "homepage": "https://srivallilanka.github.io/Srivalli_Portfolio/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

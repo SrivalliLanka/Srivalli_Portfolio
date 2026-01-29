@@ -6,15 +6,20 @@ const About = () => {
 
   if (!aboutData) return null
 
+  const base = import.meta.env.BASE_URL || '/'
+  const profileImageUrl = aboutData.profileImage
+    ? `${base}${aboutData.profileImage.replace(/^\//, '')}`
+    : null
+
   return (
     <section id="about" className="py-12 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
         {/* Profile Image Section */}
         <div className="flex justify-center mb-6">
           <div className="relative">
-            {!imageError ? (
+            {!imageError && profileImageUrl ? (
               <img
-                src={aboutData.profileImage}
+                src={profileImageUrl}
                 alt={aboutData.profileImageAlt}
                 className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-2xl border-4 border-white ring-4 ring-blue-200"
                 onError={() => setImageError(true)}
