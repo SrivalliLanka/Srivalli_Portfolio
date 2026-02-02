@@ -457,7 +457,7 @@ footer:\r
 # 4. Copy the file ID from the URL: https://drive.google.com/file/d/FILE_ID_HERE/view\r
 # 5. Paste the FILE_ID_HERE below\r
 resume:\r
-  googleDriveFileId: "10pAh1Ofluv_ShMmJ78HIBERhjRTpzXDs"\r
+  googleDriveFileId: "1K8pgD81b8Z2zojRg1rBeX6RQprL3CB62"\r
   modalTitle: "Resume"\r
   viewButtonText: "View in Google Drive"\r
   downloadButtonText: "Download PDF"\r
