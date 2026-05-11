@@ -274,7 +274,7 @@ projects:\r
         - "Method B: Dockerized application with GitHub Actions CI/CD pipeline to AWS ECR"\r
         - "Git commit SHA image tagging for full deployment traceability"\r
         - "Custom exception handling and timestamped logging throughout the pipeline"\r
-      date: "2024"\r
+      date: "2026"\r
       github: "https://github.com/SrivalliLanka/mlproject"\r
       live: ""\r
       thumbnail: "projects/MLProject_thumb.png"\r
