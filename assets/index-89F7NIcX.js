@@ -237,22 +237,28 @@ projects:\r
       detailedDescription:\r
         - "This project demonstrates the complete lifecycle of a machine learning application, covering the full journey from raw data and exploratory analysis to a deployed, automated prediction system. The objective is to predict a student's math score based on demographic and academic background, using a pipeline built around modularity, reproducibility, and operational maturity."\r
         - ""\r
-        - "<strong>Architecture Overview</strong>"\r
+        - "<strong>System Architecture and Workflow</strong>"\r
         - ""\r
         - '<div class="my-6"><img src="projects/MLProject_arch.png" alt="MLOps Pipeline Architecture" class="mx-auto rounded-lg" style="max-width:100%;image-rendering:crisp-edges;" /><p class="text-center text-gray-600 font-medium mt-2">End-to-End MLOps Pipeline Architecture</p></div>'\r
         - ""\r
-        - "<strong>ML Pipeline</strong>"\r
+        - "<strong>1. Modular Data Pipeline</strong>"\r
         - ""\r
-        - "The system is organized into three decoupled, sequential stages. <strong>Data Ingestion</strong> reads the raw dataset (<code>stud.csv</code>) and produces an 80/20 stratified train-test split. <strong>Data Transformation</strong> applies a <code>ColumnTransformer</code> to handle categorical encoding (OneHotEncoder), numerical scaling (StandardScaler), and imputation, then serializes the fitted transformer as <code>preprocessor.pkl</code>, ensuring the exact same feature engineering is applied at inference time. <strong>Model Training</strong> runs a model-agnostic evaluation loop across eight regression algorithms (Linear Regression, Decision Tree, Random Forest, Gradient Boosting, KNN, XGBoost, CatBoost, AdaBoost) with <code>GridSearchCV</code> hyperparameter tuning, automatically selecting the champion model by R² score and saving it as <code>model.pkl</code>."\r
+        - "The system is built on a decoupled, three-stage architecture designed for scalability and reproducibility:"\r
         - ""\r
-        - "<strong>Inference Bridge</strong>"\r
+        - "• <strong>Data Ingestion:</strong> Automates the transition from raw data sources to standardized, stratified train-test splits."\r
+        - "• <strong>Feature Engineering:</strong> Implements a centralized transformation pipeline to handle categorical encoding and numerical scaling. By serializing the fitted transformer as a standalone artifact, the system guarantees that inference data is processed with the exact mathematical consistency used during training."\r
+        - "• <strong>Model-Agnostic Evaluation:</strong> Features an automated training engine that evaluates multiple regression algorithms (including CatBoost, XGBoost, and Random Forest) using hyperparameter optimization. The pipeline dynamically selects and persists the champion model based on R² performance."\r
         - ""\r
-        - "The prediction pipeline loads the persisted <code>preprocessor.pkl</code> and <code>model.pkl</code> artifacts and applies the same transformation to new inputs from the Flask web form. This two-artifact design keeps feature engineering fully reproducible and decoupled from model selection, which is a key MLOps principle."\r
+        - "<strong>2. Inference Bridge</strong>"\r
         - ""\r
-        - "<strong>Deployment: Two Strategies</strong>"\r
+        - "A dedicated prediction pipeline serves as the interface between the web front-end and the ML core. This design utilizes a two-artifact approach (preprocessor + model) to ensure that feature engineering remains independent of the specific algorithm, a core MLOps principle for maintaining long-term pipeline flexibility."\r
         - ""\r
-        - "• <strong>Method A: AWS Elastic Beanstalk (<a href='https://github.com/SrivalliLanka/mlproject' target='_blank' class='text-blue-500 hover:underline'>mlproject</a>):</strong> The Flask application is deployed directly to AWS Elastic Beanstalk using <code>.ebextensions/python.config</code> for WSGI routing. This approach prioritizes rapid deployment and functional validation with minimal infrastructure overhead."\r
-        - "• <strong>Method B: Docker + GitHub Actions CI/CD (<a href='https://github.com/SrivalliLanka/aws-ci-cd-project' target='_blank' class='text-blue-500 hover:underline'>aws-ci-cd-project</a>):</strong> The same application is containerized with Docker for full environment reproducibility, then deployed through a GitHub Actions pipeline that automatically builds the image, tags it with the git commit SHA for end-to-end traceability, and pushes it to AWS ECR on every push to <code>main</code>. This demonstrates production-grade lifecycle management with automated quality gates."\r
+        - "<strong>3. Deployment Methodologies</strong>"\r
+        - ""\r
+        - "The project demonstrates two distinct operational strategies to reflect different stages of the product lifecycle:"\r
+        - ""\r
+        - "• <strong>Strategy A: Rapid Cloud Deployment (<a href='https://github.com/SrivalliLanka/mlproject' target='_blank' class='text-blue-500 hover:underline'>mlproject</a>):</strong> Focuses on direct deployment to AWS Elastic Beanstalk. This approach is optimized for rapid prototyping, functional validation, and minimal infrastructure management."\r
+        - "• <strong>Strategy B: Production-Grade CI/CD (<a href='https://github.com/SrivalliLanka/aws-ci-cd-project' target='_blank' class='text-blue-500 hover:underline'>aws-ci-cd-project</a>):</strong> Utilizes Docker containerization to ensure full environment reproducibility across any infrastructure. The workflow is managed via a GitHub Actions pipeline that automates the build and deployment process, providing end-to-end traceability from code commit to the live environment."\r
       tech:\r
         - "Python"\r
         - "scikit-learn"\r
