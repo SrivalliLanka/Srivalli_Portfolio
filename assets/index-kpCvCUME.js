@@ -93,7 +93,7 @@ about:\r
   profileImageAlt: "Srivalli Lanka"\r
   fallbackInitials: "SL"\r
   paragraphs:\r
-    - "I'm a Master's student in Information Management at the University of Illinois Urbana-Champaign, with a strong interest in using data to understand complex systems and support better decisions. My work often starts with messy, real-world data, such as operational records, research datasets, user interactions, or system outputs — and turns them into structured analysis, models, dashboards, or data workflows that explain what is happening and why it matters."\r
+    - "I'm a Master's student in Information Management at the University of Illinois Urbana-Champaign, with a strong interest in using data to understand complex systems and support better decisions. My work often starts with messy, real-world data, such as operational records, research datasets, user interactions, or system outputs and turns them into structured analysis, models, dashboards, or data workflows that explain what is happening and why it matters."\r
     - "During my graduate work, I have built a profile across data science, analytics, AI, and data engineering through applied research and hands-on projects. At RailTEC, I work on freight rail safety analytics, analyzing infrastructure, traffic, and incident data to support derailment-rate modeling and data quality assessment. At UIUC's Center for Health Informatics, I worked with climate and health data to prepare analysis-ready datasets for studying patterns between extreme weather and health outcomes."\r
     - "Before graduate school, I worked at Deloitte as a network engineer, where I gained experience with enterprise systems, performance monitoring, incident analysis, and operational data. That experience shaped how I approach data work today: not just as analysis or modeling, but as part of a larger system where reliability, context, and clear communication matter. Across my work, I enjoy building practical solutions using Python, SQL, AWS, Tableau, machine learning methods, and AI tools to connect data with real-world problems."\r
 \r
@@ -448,10 +448,8 @@ projects:\r
       date: "2024"\r
       github: "https://github.com/SrivalliLanka/mlproject"\r
       live: ""\r
-      thumbnail: "projects/MLProject_arch.png"\r
-      heroMedia:\r
-        type: "image"\r
-        url: "projects/MLProject_arch.png"\r
+      thumbnail: "projects/MLProject_thumb.png"\r
+      heroMedia: {}\r
       media: []\r
 \r
 # Contact Section\r
