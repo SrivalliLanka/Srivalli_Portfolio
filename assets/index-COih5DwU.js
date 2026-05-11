@@ -191,7 +191,7 @@ projects:
       thumbnail: "projects/RailTEC.png"
       heroMedia:
         type: "slides"
-        url: "https://docs.google.com/presentation/d/e/2PACX-1vRvpRvUSp-CxnNVSfHDHOYmgF8kats9UboZTKnDyK_TOtAd5RFCu8fA7sXiqImVwTyYqB1Hx_cjyD8f/pubembed?start=true&loop=true&delayms=3000"
+        url: "https://docs.google.com/presentation/d/e/2PACX-1vRJrS-XfRWEpDCK-UKnxtPI_bIcCzzEcJNzhuLibvyMh_5nVKGdgYHUnaebz-bOc7rSD3pzc7WccvGQ/pubembed?start=true&loop=true&delayms=3000"
       media: []
     - id: 2
       title: "Carely — A Memory-Augmented AI Companion"
